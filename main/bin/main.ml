@@ -16,8 +16,6 @@ let point : float * float = (1.5, 2.5)
 
 (* ---- Lists ---- *)
 let numbers = [1; 2; 3; 4; 5]
-
-(* map doubles every element *)
 let doubled = List.map (fun x -> x * 2) numbers
 
 (* ---- Pattern Matching ---- *)
@@ -62,6 +60,7 @@ let () =
   Printf.printf "my_float: %.2f\n" my_float;
   Printf.printf "my_string: %s\n" my_string;
   Printf.printf "my_bool: %b\n" my_bool;
+  Printf.printf "my_char: %c\n" my_char;
   Printf.printf "point: (%.1f, %.1f)\n" (fst point) (snd point);
 
   print_endline "\n-- Lists --";
@@ -91,4 +90,9 @@ let () =
   print_endline "\n-- Module --";
   Printf.printf "5 + 2 = %d\n" (Math.add 5 2);
   Printf.printf "5 - 2 = %d\n" (Math.sub 5 2);
+
+  print_endline "\n-- Function Call --";
+  Printf.printf "square of 5 = %d\n" (square 5);
+  Printf.printf "add 10 + 20 = %d\n" (add 10 20);
+
   print_endline "\nDone!";
